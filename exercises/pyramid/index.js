@@ -14,6 +14,28 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+//1. From 0 to n (iterate through rows)
+//2. Create an empty string, 'level'
+//3. From 0 to ?? (columns)
+//4. IF the column should have a '#' 
+//5. Add '#' to 'level'
+//6. ELSE add a space to 'level'
+//7. Console.log('stair')
+
+function pyramid(n) {
+
+    for(let row = 0; row < n; row++) {
+        let level = ''
+        
+        for(let column = 0; column <= n + 1; column++) {
+            if(column === row) {
+                level += '#'
+            }else {
+                level += " "
+            }
+        }
+        console.log(level)
+    }
+}
 
 module.exports = pyramid;
